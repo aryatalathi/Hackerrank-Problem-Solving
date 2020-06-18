@@ -1,0 +1,5 @@
+time = input().strip()
+hh, mm, sec = map(int, time[:-2].split(':'))
+a = time[-2:]
+hh = hh % 12 + (a.upper() == 'PM') * 12
+print(('%02d:%02d:%02d') % (hh, mm, sec))
