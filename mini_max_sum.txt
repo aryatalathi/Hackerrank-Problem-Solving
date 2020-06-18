@@ -1,0 +1,14 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the miniMaxSum function below.
+a = map(int,raw_input().strip().split(' '))
+x = sum(a)
+print (x-(max(a))), (x-(min(a)))
+
+
