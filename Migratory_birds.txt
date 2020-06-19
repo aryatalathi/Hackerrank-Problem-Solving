@@ -1,0 +1,40 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the migratoryBirds function below.
+#def migratoryBirds(arr):
+#    count = list(int,input().split())
+#    for i in range(len(arr)):
+#        for j in range(len(arr)):
+#            if(arr[i]==arr[j]):
+#               count[i]+=1
+#    arr[k] = 0
+#    for i in range(len(arr)):
+#        for k in range(len(arr)):
+#            if arr[i]<arr[k]:
+#                return arr[i]
+#                count[i]+=1
+#    least_count = count
+#    print (least_count)
+def migratoryBirds(arr):
+    b = [0, 0, 0, 0, 0, 0]
+    for i in range(len(arr)):
+        b[arr[i]] += 1
+    return b.index(max(b))
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    arr_count = int(raw_input().strip())
+
+    arr = map(int, raw_input().rstrip().split())
+
+    result = migratoryBirds(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
