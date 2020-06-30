@@ -1,0 +1,15 @@
+#!/bin/python3
+
+import math
+import sys
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    a = list(map(int, input().strip().split(' ')))
+    count = [0] * 100
+    maximum = 0
+    for number in a:
+        count[number] += 1
+    for i in range(1, 100):
+        maximum = max(maximum, count[i] + count[i - 1])
+    print(maximum)

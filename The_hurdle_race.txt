@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the hurdleRace function below.
+def hurdleRace(k, height):
+    #print(max(height) - k if max(height) > k else 0)
+    m = max(height)
+    if(m>k):
+        return m-k
+    return 0
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nk = input().split()
+
+    n = int(nk[0])
+
+    k = int(nk[1])
+
+    height = list(map(int, input().rstrip().split()))
+
+    result = hurdleRace(k, height)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
