@@ -1,0 +1,12 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the chocolateFeast function below.
+for _ in range(int(input())):
+    n,c,m=map(int,input().split())
+    print(n//c+(n//c-1)//(m-1))
